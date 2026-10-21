@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sterilization Certificate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      
+      <h1>Sterilization Certificate</h1>
+   
+    </header>
+    <p class="notice">If the applicant is a woman, <a href="https://basavalingappabs327.github.io/SFNFEMALE/" target="_blank">click here.</a> </p> 
+
+    <form id="certificateForm">
+      <fieldset class="fieldset-patient">
+        <legend>Patient and operation details (enter in English)</legend>
+        <div class="grid">
+          <label>Patient name <input name="patient" required></label>
+          <label>Patient age <input name="patientage" placeholder="e.g. 25 years"></label>
+          <label>Number of living children
+            <select name="noofchildren" id="noofchildren" required>
+              <option value="">Select number</option>
+              <option value="1">1</option><option value="2">2</option>
+            </select>
+          </label>
+          <label>Child 1 age <input name="1age"></label>
+          <label>Child 2 age <input name="2age"></label>
+          <label>Operation name <input name="operation" id="operation" required placeholder="e.g. Tubectomy"></label>
+          <label>Date of operation <input type="date" name="dateofoperation" id="dateofoperation" required></label>
+          <label>Doctor's name <input name="doctor" placeholder=" Dr.raju" required></label>
+          <label>Hospital name and address <input name="hospital" required></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset-employee">
+        <legend>Applicant / employee details (English)</legend>
+        <div class="grid">
+          <label>Employee name <input name="employee" required></label>
+          <label>Employee date of birth <input type="date" name="dobofemployee" id="dobofemployee" required></label>
+          <label>Designation <input name="designation" placeholder="eg: chief veterinary officer"></label>
+          <label>Institution <input name="instiution" placeholder="eg: veterinary dispensary"></label>
+          <label>Institution place <input name="institutionplace" placeholder="eg: Horalahalli"></label>
+          <label>Taluk <input name="taluk" placeholder="eg: T narasipura"></label>
+          <label>District <input name="district" placeholder="eg:mysore"></label>
+          <label>Basic pay <input name="basic" inputmode="decimal"></label>
+          <label>Pay scale <input name="scale"></label>
+        </div>
+        <p class="helper">Employee age (Kannada and English) and the special family norms date are calculated automatically; they do not need to be entered.</p>
+      </fieldset>
+
+      <fieldset class="fieldset-kannada">
+        <legend>ವಿವರಗಳು (ಕನ್ನಡದಲ್ಲಿ ನಮೂದಿಸಿ)</legend>
+        <div class="grid">
+          <label>ನೌಕರರ/ಅರ್ಜಿದಾರರ ಹೆಸರು <input name="employeekannada"></label>
+          <label>ಹುದ್ದೆ <input name="designationkannada" placeholder="ಮುಖ್ಯ ಪಶುವೈದ್ಯಾಧಿಕಾರಿಗಳು" ></label>
+          <label>ಸಂಸ್ಥೆ <input name="institutionkannada" placeholder="ಉದಾ: ಪಶುಚಿಕಿತ್ಸಾಲಯ"></label>
+          <label>ಸಂಸ್ಥೆಯ ಸ್ಥಳ <input name="institutionplacekannada" placeholder="ಉದಾ: ಹೊರಳಹಳ್ಳಿ"></label>
+          <label>ತಾಲ್ಲೂಕು <input name="talukkannada" placeholder="ಉದಾ: ತಿ ನರಸೀಪುರ"></label>
+          <label>ಜಿಲ್ಲೆ <input name="districtkannada" placeholder="ಉದಾ: ಮೈಸೂರು"></label>
+          <label>ರೋಗಿಯ ಹೆಸರು <input name="patientkannada"></label>
+          <label>ರೋಗಿಯ ವಯಸ್ಸು  <input name="patientagekannada" placeholder="ಉದಾ:25 ವರ್ಷಗಳು"></label>
+          <label>ಒಟ್ಟು ಮಕ್ಕಳ ಸಂಖ್ಯೆ
+            <select name="noofchildrenkannada" id="noofchildrenkannada" required>
+              <option value="">ಆಯ್ಕೆ ಮಾಡಿ</option>
+              <option value="ಒಂದು ಗಂಡು">ಒಂದು ಗಂಡು</option>
+              <option value="ಒಂದು ಹೆಣ್ಣು">ಒಂದು ಹೆಣ್ಣು</option>
+              <option value="ಒಂದು ಗಂಡು ಮತ್ತು ಒಂದು ಹೆಣ್ಣು">ಒಂದು ಗಂಡು ಮತ್ತು ಒಂದು ಹೆಣ್ಣು</option>
+              <option value="ಎರಡು ಹೆಣ್ಣು">ಎರಡು ಹೆಣ್ಣು</option>
+              <option value="ಎರಡು ಗಂಡು">ಎರಡು ಗಂಡು</option>
+            </select>
+          </label>
+          <label>ಆಸ್ಪತ್ರೆಯ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ <input name="hospitalkannada"></label>
+          <label>ಅರ್ಜಿ ಸಲ್ಲಿಸಿದ ದಿನಾಂಕ (dd/mm/yyyy) <input name="today" id="today" placeholder="dd/mm/yyyy"></label>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" id="generateBtn">Generate documents</button>
+        <span id="status" role="status" aria-live="polite"></span>
+      </div>
+
+      <div id="downloadSection" class="download-section" hidden>
+        <p class="download-ready">Your file is ready. Choose a format to download:</p>
+        <div class="download-buttons">
+          <button type="button" id="downloadPdfBtn" class="btn-pdf">Download PDF</button>
+          <button type="button" id="downloadDocxBtn" class="btn-docx">Download Word (.docx)</button>
+        </div>
+      </div>
+
+      <p class="note">A separate copy of the Google Docs template is generated for each submission. The original template is not changed.</p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
